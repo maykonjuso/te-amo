@@ -4,11 +4,18 @@ import { useContext } from "react";
 import { QuizContext } from "../../context/quiz";
 import { motion } from "framer-motion";
 import Option from "../optiton/index";
+import { useState } from "react";
 
 export default function App() {
   const [quizState, dispatch] = useContext(QuizContext);
 
   const currentQuestion = quizState.questions[quizState.currentQuestion];
+  const [questionn, setQuestion] = useState();
+
+  const saveOption = (option) => {
+    console.log(option);
+    setQuestion(option);
+  };
 
   const onSelectOption = (option) => {
     dispatch({
@@ -38,17 +45,13 @@ export default function App() {
           <Option
             option={option}
             key={option}
-            answer={currentQuestion.answer}
-            selectOption={() => onSelectOption(option)}
+            saveOption={() => saveOption(option)}
             hide={quizState.optionToHide === option ? "hide" : null}
           />
         ))}
       </DivFlutter>
-
-      {quizState.answerSelected && (
-        <Button onClick={() => dispatch({ type: "CHANGE_QUESTION" })}>
-          continuar
-        </Button>
+      {questionn && (
+        <Button onClick={() => onSelectOption(questionn)}>continuar</Button>
       )}
     </Body>
   );

@@ -1,14 +1,47 @@
 import { createContext, useReducer } from "react";
 import questions from "../data/questions";
+const STAGES = ["Start", "Conditions", "Playing", "Right", "Wrong", "End"];
 
-const STAGES = ["Start", "Conditions", "Playing", "End"];
+let goodGifts = [
+  "Cafuné",
+  "Pix de vintão",
+  "Te conto na hora",
+  "Ir a um café",
+  "Comer o que você quiser",
+  "Uma massagem",
+  "Sua sacola da Shein agora",
+  "Te conto na hora",
+  "Uma vale para me arrumar",
+  "Uma fofoca",
+  "Um elogio",
+  "Um beijo",
+  "Fazer minha sobracelha",
+];
+
+let badGifts = [
+  "Massagem para seu amor",
+  "Não ficar calada por 1 mês",
+  "Pix de vintão para seu amor",
+  "Dançar a música que seu amor quiser",
+  "Andar de bicicleta",
+  "Fica na FGA quando seu amor tiver aula",
+  "Cantar uma música",
+  "Postar algo boiola para seu amor",
+  "Postar qualquer coisa que seu amor quiser",
+  "Algo que seu amor quiser",
+  "Admitir algo q seu amor quiser",
+  "Correr por 3 minutos",
+  "10 abdominais",
+];
+
+let rewards = [];
 
 const initialState = {
   gameStage: STAGES[0],
   questions,
   currentQuestion: 0,
   answerSelected: false,
-  score: 0,
+  rewards: rewards,
   help: false,
   optionToHide: null,
 };
@@ -63,16 +96,10 @@ const quizReducer = (state, action) => {
       return {
         ...state,
         currentQuestion: nextQuestion,
-        gameStage: endGame ? STAGES[3] : state.gameStage,
+        gameStage: endGame ? STAGES[5] : STAGES[2],
         answerSelected: false,
         help: false,
       };
-    }
-
-    case "NEW_GAME": {
-      console.log(questions);
-      console.log(initialState);
-      return initialState;
     }
 
     case "CHECK_ANSWER": {
@@ -80,46 +107,28 @@ const quizReducer = (state, action) => {
 
       const answer = action.payload.answer;
       const option = action.payload.option;
-      let correctAnswer = 0;
 
-      if (answer === option) correctAnswer = 1;
+      if (answer === option) {
+        let randomIndex = Math.floor(Math.random() * goodGifts.length);
+        let randomItem = goodGifts[randomIndex];
+        rewards.push(randomItem);
 
-      return {
-        ...state,
-        score: state.score + correctAnswer,
-        answerSelected: option,
-      };
-    }
+        return {
+          ...state,
+          answerSelected: option,
+          gameStage: STAGES[3],
+        };
+      } else {
+        let randomIndex = Math.floor(Math.random() * badGifts.length);
+        let randomItem = badGifts[randomIndex];
+        rewards.push(randomItem);
 
-    case "SHOW_TIP": {
-      return {
-        ...state,
-        help: "tip",
-      };
-    }
-
-    case "REMOVE_OPTION": {
-      const questionWithoutOption = state.questions[state.currentQuestion];
-
-      console.log(state.currentQuestion);
-
-      console.log(questionWithoutOption);
-
-      let repeat = true;
-      let optionToHide;
-
-      questionWithoutOption.options.forEach((option) => {
-        if (option !== questionWithoutOption.answer && repeat) {
-          optionToHide = option;
-          repeat = false;
-        }
-      });
-
-      return {
-        ...state,
-        optionToHide,
-        help: true,
-      };
+        return {
+          ...state,
+          answerSelected: option,
+          gameStage: STAGES[4],
+        };
+      }
     }
 
     default:

@@ -8,6 +8,7 @@ import {
   Button,
   TittleGreen,
   TittleRed,
+  DivCondit,
 } from "./style";
 import imagem from "../../img/attention.svg";
 import { useContext } from "react";
@@ -33,14 +34,14 @@ export default function App() {
       <DivFlutter>
         <H1>Condições</H1>
         <div>
-          <div>
+          <DivCondit>
             <TittleGreen>Acerto</TittleGreen>
             <P>Você receberá uma recompensa por isso.</P>
-          </div>
-          <div>
+          </DivCondit>
+          <DivCondit>
             <TittleRed>Erro</TittleRed>
             <P>Você receberá uma recompensa também, só que não tão boa.</P>
-          </div>
+          </DivCondit>
         </div>
       </DivFlutter>
       <Button onClick={() => dispatch({ type: "CHANGE_STAGE" })}>
