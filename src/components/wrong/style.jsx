@@ -91,4 +91,7 @@ export const Button = styled.button`
   border: none;
   margin-top: 31px;
   cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
 `;

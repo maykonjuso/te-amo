@@ -100,6 +100,9 @@ export const Button = styled.button`
   width: 156px;
   height: 40px;
   background: rgba(249, 249, 249, 0.62);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
   /* mix-blend-mode: luminosity; */
   border-radius: 20px;
   font-family: "Poppins";

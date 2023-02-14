@@ -82,6 +82,9 @@ export const Button = styled.button`
   vertical-align: middle;
   color: #17131e;
   border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
   cursor: pointer;
 
   margin-top: 31px;

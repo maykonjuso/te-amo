@@ -13,6 +13,9 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
 
   &:hover {
     background: #e9b8be;
