@@ -41,8 +41,8 @@ const initialState = {
   questions,
   currentQuestion: 0,
   answerSelected: false,
+  selectedOption: false,
   rewards: rewards,
-  help: false,
   optionToHide: null,
 };
 
@@ -111,8 +111,6 @@ const quizReducer = (state, action) => {
       let randomIndex;
       let randomItem;
 
-      console.log(rewards);
-
       if (answer === option) {
         do {
           randomIndex = Math.floor(Math.random() * goodGifts.length);
@@ -125,6 +123,7 @@ const quizReducer = (state, action) => {
           ...state,
           answerSelected: option,
           gameStage: STAGES[3],
+          selectedOption: false,
         };
       } else {
         do {
@@ -138,8 +137,16 @@ const quizReducer = (state, action) => {
           ...state,
           answerSelected: option,
           gameStage: STAGES[4],
+          selectedOption: false,
         };
       }
+    }
+
+    case "SELECT_OPTION": {
+      return {
+        ...state,
+        selectedOption: true,
+      };
     }
 
     default:
