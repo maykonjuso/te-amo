@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function App() {
   const [quizState, dispatch] = useContext(QuizContext);
 
-  const currentQuestion = quizState.questions[quizState.currentQuestion];
+  const currentReward = quizState.rewards[quizState.currentQuestion];
 
   return (
     <Body
@@ -23,7 +23,7 @@ export default function App() {
       <Div>Errou</Div>
       <DivFlutter>
         <H1>Sua recompensa</H1>
-        <P>{quizState.rewards[quizState.currentQuestion]} </P>
+        <P>{currentReward.reward}</P>
       </DivFlutter>
       <Button
         onClick={() => dispatch({ type: "CHANGE_QUESTION" })}
