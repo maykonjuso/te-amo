@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/te-amo/static/js/main.5d6d6a67.js",
+    "main.js": "/te-amo/static/js/main.301650c5.js",
     "static/media/attention.svg": "/te-amo/static/media/attention.5f55214564ee149dcc15cb177af3676e.svg",
     "index.html": "/te-amo/index.html",
     "static/media/heart.svg": "/te-amo/static/media/heart.d92d9b72a2bf5c43bc7e395818749084.svg",
-    "main.5d6d6a67.js.map": "/te-amo/static/js/main.5d6d6a67.js.map"
+    "main.301650c5.js.map": "/te-amo/static/js/main.301650c5.js.map"
   },
   "entrypoints": [
-    "static/js/main.5d6d6a67.js"
+    "static/js/main.301650c5.js"
   ]
 }
