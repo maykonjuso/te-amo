@@ -3,10 +3,11 @@ import { Body, H1, P, Div, DivFlutter } from "./style";
 import { useContext } from "react";
 import { QuizContext } from "../../context/quiz";
 import { motion } from "framer-motion";
-import Option from "../optiton/index";
+import OptionReward from "../optionReward/index";
 
 export default function App() {
   const [quizState, dispatch] = useContext(QuizContext);
+
   return (
     <Body
       as={motion.body}
@@ -21,11 +22,7 @@ export default function App() {
       <Div>Suas recompensas</Div>
       <DivFlutter>
         {quizState.rewards.map((option) => (
-          <Option
-            option={option}
-            key={option}
-            hide={quizState.optionToHide === option ? "hide" : null}
-          />
+          <OptionReward option={option} key={option} />
         ))}
       </DivFlutter>
     </Body>

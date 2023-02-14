@@ -3,14 +3,16 @@ import { Button } from "./style";
 import { useContext } from "react";
 import { QuizContext } from "../../context/quiz";
 
-export default function App({ option, saveOption }) {
+export default function App({ option }) {
   const [quizState, dispatch] = useContext(QuizContext);
 
-  const currentReward = quizState.rewards[quizState.currentQuestion];
-
-  const handleClick = () => {
-    saveOption();
-  };
-
-  return <Button onClick={handleClick} style={"background :" (currentReward.info) ? "gree" : "red"}>{option}</Button>;
+  return (
+    <Button
+      style={{
+        background: option.info ? "#6cd3a0" : "#f7a2ae",
+      }}
+    >
+      {option.reward}
+    </Button>
+  );
 }

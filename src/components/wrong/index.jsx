@@ -3,11 +3,14 @@ import { Body, H1, P, Div, DivFlutter, Button } from "./style";
 import { useContext } from "react";
 import { QuizContext } from "../../context/quiz";
 import { motion } from "framer-motion";
+import Option from "../optiton/index";
 
 export default function App() {
   const [quizState, dispatch] = useContext(QuizContext);
 
   const currentReward = quizState.rewards[quizState.currentQuestion];
+  const currentQuestion = quizState.questions[quizState.currentQuestion];
+  const answer = currentQuestion.answer;
 
   return (
     <Body
@@ -24,6 +27,10 @@ export default function App() {
       <DivFlutter>
         <H1>Sua recompensa</H1>
         <P>{currentReward.reward}</P>
+        <div>
+          <H1>Resposta correta:</H1>
+          <Option option={answer} key={answer} />
+        </div>
       </DivFlutter>
       <Button
         onClick={() => dispatch({ type: "CHANGE_QUESTION" })}
