@@ -64,6 +64,7 @@ export const DivFlutter = styled.div`
   );
   border-radius: 20px;
   padding-bottom: 40px;
+  padding-top: 60px;
   width: 320.16px;
 `;
 

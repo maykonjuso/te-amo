@@ -28,7 +28,6 @@ export default function App() {
           />
         ))}
       </DivFlutter>
-      <DivFlutter></DivFlutter>
     </Body>
   );
 }
