@@ -39,29 +39,6 @@ export const H1 = styled.h1`
   color: #17131e;
 `;
 
-export const TittleGreen = styled.h2`
-  width: 62px;
-  height: 23px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 22px;
-  color: #61ab87;
-`;
-
-export const TittleRed = styled.h2`
-  margin-top: 10px;
-  width: 62px;
-  height: 23px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 22px;
-  color: #ab6161; ;
-`;
-
 export const P = styled.p`
   font-family: "Poppins";
   font-style: normal;
@@ -79,7 +56,6 @@ export const DivFlutter = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 320px;
   height: max-content;
   background: linear-gradient(
     180deg,
@@ -87,6 +63,8 @@ export const DivFlutter = styled.div`
     rgba(254, 237, 244, 0.58) 100%
   );
   border-radius: 20px;
+  padding-bottom: 40px;
+  width: 320.16px;
 `;
 
 export const Button = styled.button`
