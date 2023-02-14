@@ -110,7 +110,7 @@ const quizReducer = (state, action) => {
 
       let randomIndex;
       let randomItem;
-      let objectRadom;
+      let objectRandom;
 
       if (answer === option) {
         do {
