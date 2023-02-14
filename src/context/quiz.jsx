@@ -116,14 +116,13 @@ const quizReducer = (state, action) => {
         do {
           randomIndex = Math.floor(Math.random() * goodGifts.length);
           randomItem = goodGifts[randomIndex];
-
-          objectRadom = {
+          objectRandom = {
             info: true,
             reward: randomItem,
           };
-        } while (rewards.includes(objectRadom));
+        } while (rewards.some((reward) => reward.reward === randomItem));
 
-        rewards.push(objectRadom);
+        rewards.push(objectRandom);
 
         return {
           ...state,
@@ -135,14 +134,13 @@ const quizReducer = (state, action) => {
         do {
           randomIndex = Math.floor(Math.random() * badGifts.length);
           randomItem = badGifts[randomIndex];
-
-          objectRadom = {
+          objectRandom = {
             info: false,
             reward: randomItem,
           };
-        } while (rewards.includes(objectRadom));
+        } while (rewards.some((reward) => reward.reward === randomItem));
 
-        rewards.push(objectRadom);
+        rewards.push(objectRandom);
 
         return {
           ...state,
