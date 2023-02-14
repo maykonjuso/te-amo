@@ -12,4 +12,9 @@ export const Button = styled.button`
   padding: 10px 10px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background: #e9b8be;
+  }
 `;

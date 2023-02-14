@@ -3,14 +3,14 @@ import questions from "../data/questions";
 const STAGES = ["Start", "Conditions", "Playing", "Right", "Wrong", "End"];
 
 let goodGifts = [
-  "Cafuné",
-  "Pix de vintão",
-  "Te conto na hora",
-  "Ir a um café",
-  "Comer o que você quiser",
+  "Um cafuné",
+  "Um pix de R$20,00",
+  "Te falo na hora",
+  "Escolher um café para a gente ir",
+  "Comer onde você quiser",
   "Uma massagem",
-  "Sua sacola da Shein agora",
-  "Te conto na hora",
+  "Sua sacola da Shein",
+  "Um doce",
   "Uma vale para me arrumar",
   "Uma fofoca",
   "Um elogio",
@@ -20,16 +20,16 @@ let goodGifts = [
 
 let badGifts = [
   "Massagem para seu amor",
-  "Não ficar calada por 1 mês",
-  "Pix de vintão para seu amor",
+  "Não ficar calada por um mês",
+  "Mandar pix de R$20,00 para seu amor",
   "Dançar a música que seu amor quiser",
   "Andar de bicicleta",
-  "Fica na FGA quando seu amor tiver aula",
+  "Ficar na FGA quando seu amor tiver aula",
   "Cantar uma música",
   "Postar algo boiola para seu amor",
   "Postar qualquer coisa que seu amor quiser",
   "Algo que seu amor quiser",
-  "Admitir algo q seu amor quiser",
+  "Admitir algo que seu amor quiser",
   "Correr por 3 minutos",
   "10 abdominais",
 ];

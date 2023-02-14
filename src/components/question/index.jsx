@@ -13,7 +13,6 @@ export default function App() {
   const [questionn, setQuestion] = useState();
 
   const saveOption = (option) => {
-    console.log(option);
     setQuestion(option);
   };
 
@@ -51,7 +50,21 @@ export default function App() {
         ))}
       </DivFlutter>
       {questionn && (
-        <Button onClick={() => onSelectOption(questionn)}>continuar</Button>
+        <Button
+          onClick={() => onSelectOption(questionn)}
+          as={motion.button}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 0.5, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 10,
+          }}
+        >
+          continuar
+        </Button>
       )}
     </Body>
   );

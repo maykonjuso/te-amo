@@ -25,7 +25,12 @@ export default function App() {
         <H1>Sua recompensa</H1>
         <P>{quizState.rewards[quizState.currentQuestion]} </P>
       </DivFlutter>
-      <Button onClick={() => dispatch({ type: "CHANGE_QUESTION" })}>
+      <Button
+        onClick={() => dispatch({ type: "CHANGE_QUESTION" })}
+        as={motion.button}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.9 }}
+      >
         continuar
       </Button>
     </Body>

@@ -20,13 +20,13 @@ const data = [
   },
   {
     id: "3",
-    question: "Quais presentes seu abô te deu no dia 09 de abril?",
+    question: "Quais presentes seu amor te deu no dia 09 de abril?",
     options: ["Livros e chaveiro", "Livros", "Materiais escolares", "Caneca"],
     answer: "Livros e chaveiro",
   },
   {
     id: "4",
-    question: "Ainda sobre esse dia, a ordem dos acontecimentos foram:",
+    question: "Ainda sobre o dia 09 de abril, a ordem dos acontecimentos foram:",
     options: [
       "Uber, estacionamento 07, Uber, banheiro, estacionamento 07, Uber, pátio e Uber.",
       "Zoológico, Uber, estacionamento 07, banheiro, estacionamento 07, pátio e Uber.",
@@ -38,7 +38,7 @@ const data = [
   },
   {
     id: "5",
-    question: "O que nós temos idênticos?",
+    question: "O que das alternativas abaixo a gente tem igual?",
     options: [
       "All star preto de cano alto",
       "Blusa da seleção",
@@ -71,7 +71,7 @@ const data = [
   },
   {
     id: "8",
-    question: "Que dia a gente se viu pela primeira vez?",
+    question: "Qual foi o dia que a gente se viu pela primeira vez?",
     options: [
       "05 de fevereiro de 2019",
       "07 de fevereiro de 2019",
@@ -82,7 +82,7 @@ const data = [
   },
   {
     id: "9",
-    question: "Quem ficou caidinho(a) pelo outro primeiro?",
+    question: "Quem ficou caidinho pelo outro primeiro?",
     options: ["Karyne", "Maykon"],
     answer: "Maykon",
   },

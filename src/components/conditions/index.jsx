@@ -43,13 +43,18 @@ export default function App() {
           <DivCondit>
             <TittleRed>Erro</TittleRed>
             <P>
-              Você receberá uma <span>recompensa</span> também, só que <span>não</span> tão
-              boa.
+              Você receberá uma <span>recompensa</span> também, só que{" "}
+              <span>não</span> tão boa.
             </P>
           </DivCondit>
         </div>
       </DivFlutter>
-      <Button onClick={() => dispatch({ type: "CHANGE_STAGE" })}>
+      <Button
+        onClick={() => dispatch({ type: "CHANGE_STAGE" })}
+        as={motion.button}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.9 }}
+      >
         continuar
       </Button>
     </Body>

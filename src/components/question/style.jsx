@@ -75,7 +75,7 @@ export const Button = styled.button`
   width: 156px;
   height: 40px;
   background: rgba(249, 249, 249, 0.62);
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
   border-radius: 20px;
   font-family: "Poppins";
   font-style: normal;
