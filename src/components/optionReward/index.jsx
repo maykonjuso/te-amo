@@ -9,7 +9,7 @@ export default function App({ option }) {
   return (
     <Button
       style={{
-        background: option.info ? "#d8f8e1" : "#fabfb7",
+        background: option.info ? "#9bd3ae" : "#e9b8be",
       }}
     >
       {option.reward}
