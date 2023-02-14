@@ -108,9 +108,17 @@ const quizReducer = (state, action) => {
       const answer = action.payload.answer;
       const option = action.payload.option;
 
+      let randomIndex;
+      let randomItem;
+
+      console.log(rewards);
+
       if (answer === option) {
-        let randomIndex = Math.floor(Math.random() * goodGifts.length);
-        let randomItem = goodGifts[randomIndex];
+        do {
+          randomIndex = Math.floor(Math.random() * goodGifts.length);
+          randomItem = goodGifts[randomIndex];
+        } while (rewards.includes(randomItem));
+
         rewards.push(randomItem);
 
         return {
@@ -119,8 +127,11 @@ const quizReducer = (state, action) => {
           gameStage: STAGES[3],
         };
       } else {
-        let randomIndex = Math.floor(Math.random() * badGifts.length);
-        let randomItem = badGifts[randomIndex];
+        do {
+          randomIndex = Math.floor(Math.random() * badGifts.length);
+          randomItem = badGifts[randomIndex];
+        } while (rewards.includes(randomItem));
+
         rewards.push(randomItem);
 
         return {

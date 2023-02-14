@@ -74,6 +74,10 @@ export const P = styled.p`
   width: 263px;
   height: 46px;
   color: #7b718b;
+
+  span {
+    font-weight: 700;
+  }
 `;
 
 export const DivFlutter = styled.div`

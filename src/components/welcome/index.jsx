@@ -19,7 +19,7 @@ export default function App() {
         <img src={imagem} />
       </Div>
       <DivFlutter>
-        <H1>Bem-vinda ao primeiro quiz feito para você e pelo seu mozão!</H1>
+        <H1><span>Bem-vinda</span> ao primeiro quiz feito para você e pelo <span>seu mozão</span>!</H1>
         <P>
           O objetivo aqui é responder algumas perguntas relacionadas ao nosso
           relacionamento, ou seja, terão perguntas sobre situações, atitudes e

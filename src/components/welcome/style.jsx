@@ -25,12 +25,16 @@ export const H1 = styled.h1`
   height: 80px;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   text-align: center;
   color: #17131e;
   margin-top: 20px;
+
+  span {
+    font-weight: 800;
+  }
 `;
 
 export const P = styled.p`

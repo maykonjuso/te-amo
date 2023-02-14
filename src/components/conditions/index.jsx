@@ -36,11 +36,16 @@ export default function App() {
         <div>
           <DivCondit>
             <TittleGreen>Acerto</TittleGreen>
-            <P>Você receberá uma recompensa por isso.</P>
+            <P>
+              Você receberá uma <span>recompensa</span> por isso.
+            </P>
           </DivCondit>
           <DivCondit>
             <TittleRed>Erro</TittleRed>
-            <P>Você receberá uma recompensa também, só que não tão boa.</P>
+            <P>
+              Você receberá uma <span>recompensa</span> também, só que <span>não</span> tão
+              boa.
+            </P>
           </DivCondit>
         </div>
       </DivFlutter>
