@@ -1,18 +1,9 @@
 import "./style";
-import {
-  Body,
-  H1,
-  P,
-  Div,
-  DivFlutter,
-  Button,
-  TittleGreen,
-  TittleRed,
-} from "./style";
-import imagem from "../../img/attention.svg";
+import { Body, H1, P, Div, DivFlutter } from "./style";
 import { useContext } from "react";
 import { QuizContext } from "../../context/quiz";
 import { motion } from "framer-motion";
+import Option from "../optiton/index";
 
 export default function App() {
   const [quizState, dispatch] = useContext(QuizContext);
@@ -28,6 +19,15 @@ export default function App() {
       }}
     >
       <Div>Suas recompensas</Div>
+      <DivFlutter>
+        {quizState.rewards.map((option) => (
+          <Option
+            option={option}
+            key={option}
+            hide={quizState.optionToHide === option ? "hide" : null}
+          />
+        ))}
+      </DivFlutter>
       <DivFlutter></DivFlutter>
     </Body>
   );
