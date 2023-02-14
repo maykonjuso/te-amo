@@ -63,8 +63,8 @@ export const DivFlutter = styled.div`
     rgba(254, 237, 244, 0.58) 100%
   );
   border-radius: 20px;
-  padding-bottom: 40px;
-  padding-top: 60px;
+  padding-bottom: 35px;
+  padding-top: 50px;
   width: 320.16px;
 `;
 
