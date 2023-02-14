@@ -1,5 +1,5 @@
 import "./style";
-import { Body, H1, P, Div, DivFlutter, Button } from "./style";
+import { Body, H1, P, Div, DivFlutter, Button, Divir, H12 } from "./style";
 import { useContext } from "react";
 import { QuizContext } from "../../context/quiz";
 import { motion } from "framer-motion";
@@ -27,10 +27,10 @@ export default function App() {
       <DivFlutter>
         <H1>Sua recompensa</H1>
         <P>{currentReward.reward}</P>
-        <div>
-          <H1>Resposta correta:</H1>
+        <Divir>
+          <H12>Resposta correta</H12>
           <Option option={answer} key={answer} />
-        </div>
+        </Divir>
       </DivFlutter>
       <Button
         onClick={() => dispatch({ type: "CHANGE_QUESTION" })}

@@ -28,6 +28,14 @@ export const Div = styled.div`
   color: #ab6161;
 `;
 
+export const Divir = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+`;
+
 export const H1 = styled.h1`
   margin: 50px 0px 20px 0px;
   max-width: 255px;
@@ -42,6 +50,19 @@ export const H1 = styled.h1`
   color: #17131e;
 `;
 
+export const H12 = styled.h1`
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+`;
 export const P = styled.p`
   width: 240px;
   height: 27px;
